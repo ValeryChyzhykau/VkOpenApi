@@ -1,0 +1,21 @@
+
+<div class='background'>
+    <mat-grid-list cols='3' rowHeight="190px" class='grid'>
+        <mat-grid-tile colspan='2' rowspan='2' class='background-user-info'>
+            <div *ngIf='user' class='user-info'>
+                <p class='name'>{{user.first_name}} {{user.last_name}}</p>
+                <p class='photo'><img [src]='user.photo_200_orig'></p>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan='1' rowspan='1'>
+            <div class='status-bar'>
+                <p *ngIf='user' class='status'>{{user.online | showOnline}} </p>
+                <button mat-fab color='accent' (click)='logout()'>Logout</button>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan=1 rowspan='1'>
+            <p class='friends'><button mat-raised-button color='accent'><a routerLink='/friends'>Friends</a></button>
+            </p>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

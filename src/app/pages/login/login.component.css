@@ -1,0 +1,9 @@
+.login:hover {
+  border-radius: 50%;
+  background: #182431;
+  opacity: 0.7;
+}
+h1 {
+  text-align: center;
+}
+

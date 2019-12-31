@@ -1,0 +1,16 @@
+<div class='background'>
+    <button mat-raised-button color="accent"><a routerLink='/about'>User Information...</a></button>
+    <mat-grid-list cols=10 *ngFor='let friend of friends' class='test'>
+        <mat-grid-tile colspan=5 rowspan=2>
+            <div>
+                <p>{{friend.first_name}} {{friend.last_name}}</p>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan=5 rowspan=2>
+            <div>
+                <p><img [src]='friend.photo_50'></p>
+            </div>
+        </mat-grid-tile>
+
+    </mat-grid-list>
+</div>
